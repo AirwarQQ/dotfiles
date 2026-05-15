@@ -1,0 +1,6 @@
+-- TODO: fix satty
+-- windowrule = float on, match:class com.gabm.satty
+-- # windowrule = maximize on, match:class com.gabm.satty
+-- windowrule = center 1, match:class com.gabm.satty
+-- windowrule = size 10% 10%, match:class com.gabm.satty
+-- windowrule = animation slide, match:class com.gabm.satty

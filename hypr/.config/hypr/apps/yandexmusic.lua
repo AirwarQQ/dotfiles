@@ -1,0 +1,7 @@
+-- hl.window_rule({
+-- 	name = "yandex-music-rule",
+-- 	match = {
+-- 		class = "^(YandexMusic)$",
+-- 	},
+-- 	workspace = "special:music",
+-- })
