@@ -1,1 +1,8 @@
 **/mimeinfo.cache
+
+.local/share/applications/*
+!.local/share/applications/vesktop.desktop
+!.local/share/applications/yandexmusic.desktop
+!.local/share/applications/steam.desktop
+!.local/share/applications/chromium.desktop
+
