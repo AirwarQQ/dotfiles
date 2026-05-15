@@ -26,7 +26,7 @@ hl.bind(MAINMOD .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd(SESSION_MENU))
 
 hl.bind(MAINMOD .. " + SHIFT + RETURN", hl.dsp.exec_cmd(BROWSER))
 hl.bind(MAINMOD .. " + E", hl.dsp.exec_cmd(FILEMANAGER))
-hl.bind(MAINMOD .. " + SHIFT + M", hl.dsp.exec_cmd(MUSIC))
+hl.bind(MAINMOD .. " + M", hl.dsp.exec_cmd(MUSIC))
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 
