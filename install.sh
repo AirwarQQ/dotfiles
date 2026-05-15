@@ -2,6 +2,13 @@
 
 set -euo pipefail
 
+echo "==> Installing packages..."
+if [ -f "$DOTFILES/packages.txt" ]; then
+  grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
+else
+  echo "  warn: packages.txt not found, skipping"
+fi
+
 DOTFILES="$HOME/dotfiles"
 
 echo "==> Creating directories..."

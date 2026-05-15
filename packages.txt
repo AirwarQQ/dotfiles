@@ -1,0 +1,27 @@
+# === Essential ===
+alacritty
+chromium
+github-cli
+lazygit
+lianli-linux-git
+libreoffice-fresh
+neovim
+vesktop
+yandex-music
+yazi
+
+# === Window Manager ===
+noctalia-shell
+ttf-jetbrains-mono-nerd
+adw-gtk-theme
+cliphist
+egl-wayland
+plymouth-theme-nekopara-chocola-git
+satty
+hyprland-preview-share-picker-git
+
+# === Gaming ===
+steam
+gamescope
+nvtop
+nwg-look
