@@ -1,9 +1,15 @@
+hl.config({
+	-- debug = {
+	-- 	overlay = true,
+	-- },
+})
+
 -----------------------
 ----    NOCTALIA   ----
 -----------------------
 
 hl.layer_rule({
-	-- name = noctalia,
+	name = "noctalia",
 	match = { namespace = "noctalia-background-.*$" },
 	ignore_alpha = 0.5,
 	blur = true,
@@ -24,7 +30,6 @@ hl.config({
 		anr_missed_pings = 3,
 		on_focus_under_fullscreen = 1,
 	},
-
 	xwayland = {
 		force_zero_scaling = true,
 	},
@@ -44,7 +49,7 @@ hl.config({
 		-- gaps_in = 3,
 		-- gaps_out = 6,
 		gaps_in = 5,
-		gaps_out = 20,
+		gaps_out = 10,
 
 		border_size = 2,
 
@@ -54,7 +59,7 @@ hl.config({
 		},
 
 		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-		resize_on_border = false,
+		resize_on_border = true,
 
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
 		allow_tearing = false,
@@ -81,6 +86,8 @@ hl.config({
 			enabled = true,
 			size = 3,
 			passes = 1,
+			-- special = true,
+			-- brightness = 0.60,
 			vibrancy = 0.1696,
 		},
 	},
@@ -141,8 +148,6 @@ hl.config({
 	dwindle = {
 		preserve_split = true, -- You probably want this
 		force_split = 2,
-		-- TODO:
-		-- pseudotile = true,
 	},
 })
 

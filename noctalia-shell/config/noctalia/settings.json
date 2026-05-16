@@ -199,10 +199,10 @@
                             "textColor": "none"
                         },
                         {
-                            "id": "plugin:network-manager-vpn"
+                            "id": "plugin:hyprland-steam-overlay"
                         },
                         {
-                            "id": "plugin:hyprland-steam-overlay"
+                            "id": "plugin:network-manager-vpn"
                         }
                     ]
                 }
@@ -346,14 +346,14 @@
                             "usePadding": false
                         },
                         {
-                            "id": "plugin:network-manager-vpn"
-                        },
-                        {
                             "displayMode": "forceOpen",
                             "iconColor": "none",
                             "id": "KeyboardLayout",
                             "showIcon": true,
                             "textColor": "none"
+                        },
+                        {
+                            "id": "plugin:network-manager-vpn"
                         }
                     ]
                 }
@@ -481,6 +481,9 @@
                             "id": "KeyboardLayout",
                             "showIcon": true,
                             "textColor": "none"
+                        },
+                        {
+                            "id": "plugin:network-manager-vpn"
                         }
                     ]
                 }
@@ -642,12 +645,6 @@
                     "textColor": "none"
                 },
                 {
-                    "defaultSettings": {
-                        "connectedColor": "primary",
-                        "disableToastNotifications": false,
-                        "disconnectedColor": "none",
-                        "displayMode": "onhover"
-                    },
                     "id": "plugin:network-manager-vpn"
                 }
             ]
@@ -729,6 +726,9 @@
                 },
                 {
                     "id": "NoctaliaPerformance"
+                },
+                {
+                    "id": "WallpaperSelector"
                 }
             ],
             "right": [
@@ -799,7 +799,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.05,
+        "dimmerOpacity": 0.06,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": true,
@@ -1103,7 +1103,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "monospace",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.8300000000000001,
+        "panelBackgroundOpacity": 0.67,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "attached",

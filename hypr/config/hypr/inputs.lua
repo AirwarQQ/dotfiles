@@ -38,6 +38,18 @@ hl.config({
 	},
 })
 
--- TODO
--- windowrule = match:class (Alacritty|kitty|foot), scroll_touchpad 1.5
--- windowrule = match:class com.mitchellh.ghostty, scroll_touchpad 0.2
+hl.window_rule({
+	name = "terminal scroll_touchpad",
+	match = {
+		class = "Alacritty|kitty|foot",
+	},
+	scroll_touchpad = 1.5,
+})
+
+hl.window_rule({
+	name = "terminal scroll_touchpad.ghostyy",
+	match = {
+		class = "Acom.mitchellh.ghostty",
+	},
+	scroll_touchpad = 0.2,
+})

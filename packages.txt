@@ -9,6 +9,7 @@ neovim
 vesktop
 yandex-music
 yazi
+cliamp
 
 # === Window Manager ===
 noctalia-shell
@@ -19,6 +20,7 @@ egl-wayland
 plymouth-theme-nekopara-chocola-git
 satty
 hyprland-preview-share-picker-git
+gum
 
 # === Gaming ===
 steam

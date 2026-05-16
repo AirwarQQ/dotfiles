@@ -6,9 +6,6 @@
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
 -- Example window rules that are useful
---
--- hl.workspace_rule({})
-
 -- local suppressMaximizeRule = hl.window_rule({
 -- 	-- Ignore maximize requests from all apps. You'll probably like this.
 -- 	name = "suppress-maximize-events",
@@ -50,14 +47,30 @@ hl.window_rule({
 	float = true,
 })
 
--- TODO: left screen tag and rules
--- workspace = 1, monitor:DP-2, persistent:true
--- windowrule = tag +leftscreen, match:class ^(org\.telegram\.desktop)$
--- windowrule = tag +leftscreen, match:class ^(YandexMusic)$
--- windowrule = tag +leftscreen, match:class ^(vesktop)$
--- windowrule = workspace 1 silent, match:tag leftscreen
---
--- TODO: choosefile float
--- windowrule = tag +choosefile, match:title ^(Choose Files)$
--- windowrule = float true, match:tag choosefile
--- windowrule = center on, match:tag choosefile
+-- left screen tag and rules
+hl.workspace_rule({
+	workspace = "1",
+	monitor = "DP-2",
+	persistent = true,
+})
+hl.window_rule({
+	match = {
+		class = "^(org.telegram.desktop)$|vesktop$",
+	},
+	workspace = 1,
+	monitor = "DP-2",
+})
+
+--choosefile float
+hl.window_rule({
+	match = {
+		class = "^xdg-desktop-portal-gtk$",
+	},
+	float = true,
+	center = true,
+})
+hl.window_rule({
+	match = { title = "^(Choose Files)$" },
+	float = true,
+	center = true,
+})

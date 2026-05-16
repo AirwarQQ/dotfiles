@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=YouTube
+Comment=YouTube
+Exec=uwsm-app -- chromium --class=YouTube --app=https://youtube.com
+Terminal=false
+Type=Application
+Icon=/home/airwar/.local/share/applications/icons/YouTube.png
+StartupNotify=true

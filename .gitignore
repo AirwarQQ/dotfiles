@@ -5,4 +5,5 @@ local/share/applications/*
 !local/share/applications/yandexmusic.desktop
 !local/share/applications/steam.desktop
 !local/share/applications/chromium.desktop
-
+!local/share/applications/YouTube.desktop
+!local/share/applications/icons/YouTube.png
