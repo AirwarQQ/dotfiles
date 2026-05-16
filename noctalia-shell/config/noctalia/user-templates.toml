@@ -19,6 +19,11 @@
 input_path = "~/.config/hypr/noctalia/noctalia-colors-template.lua"
 output_path = "~/.config/hypr/noctalia/noctalia-colors.lua"
 
+[templates.chromium_theme]
+input_path = "~/dotfiles/chromium/chromium-template.theme"
+output_path = "~/dotfiles/chromium/chromium.theme"
+post_hook = "update-chromium-theme"
+
 [templates.nvim-base16]
 input_path = "~/.config/nvim/lua/matugen-template.lua"
 output_path = "~/.config/nvim/lua/matugen.lua"

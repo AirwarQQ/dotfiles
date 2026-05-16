@@ -1,4 +1,5 @@
 require("apps.steam")
+require("apps.webapp_install")
 local music = require("apps.music")
 local launch_or_focus = require("apps.launch_or_focus")
 MAINMOD = "SUPER" -- Sets "Windows" key as main modifier
@@ -9,6 +10,7 @@ MAINMOD = "SUPER" -- Sets "Windows" key as main modifier
 -- Set programs that you use
 local terminal = "uwsm-app -- alacritty"
 local tterminal = terminal .. " -e tmux new-session -A -s Work"
+local webapp_install = terminal .. " --class=webapp-install -e webapp_install "
 local browser = "uwsm-app -- chromium"
 local browser_privat = "uwsm-app -- chromium --incognito"
 local filemanager = "uwsm-app -- nautilus"
@@ -27,6 +29,8 @@ local claude = { cmd = "uwsm-app -- Claude.desktop", class = "chrome-claude.ai__
 
 hl.bind(MAINMOD .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(MAINMOD .. " + ALT + RETURN", hl.dsp.exec_cmd(tterminal))
+hl.bind(MAINMOD .. " + SHIFT + I", hl.dsp.exec_cmd(webapp_install))
+
 hl.bind(MAINMOD .. " + SHIFT + RETURN", hl.dsp.exec_cmd(browser))
 hl.bind(MAINMOD .. " + SHIFT + B", hl.dsp.exec_cmd(browser_privat))
 hl.bind(MAINMOD .. " + E", hl.dsp.exec_cmd(filemanager))

@@ -645,6 +645,12 @@
                     "textColor": "none"
                 },
                 {
+                    "defaultSettings": {
+                        "connectedColor": "primary",
+                        "disableToastNotifications": false,
+                        "disconnectedColor": "none",
+                        "displayMode": "onhover"
+                    },
                     "id": "plugin:network-manager-vpn"
                 }
             ]
@@ -679,7 +685,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "DP-2",
-        "predefinedScheme": "Catppuccin",
+        "predefinedScheme": "Noctalia (default)",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true

@@ -4,12 +4,12 @@ set -euo pipefail
 
 DOTFILES="$HOME/dotfiles"
 
-echo "==> Installing packages..."
-if [ -f "$DOTFILES/packages.txt" ]; then
-  grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
-else
-  echo "  warn: packages.txt not found, skipping"
-fi
+# echo "==> Installing packages..."
+# if [ -f "$DOTFILES/packages.txt" ]; then
+#   grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
+# else
+#   echo "  warn: packages.txt not found, skipping"
+# fi
 
 echo "==> Creating directories..."
 mkdir -p "$HOME/.config/fish/conf.d"
@@ -34,5 +34,7 @@ ln -sfn "$DOTFILES/noctalia-shell/config/noctalia/user-templates.toml" "$HOME/.c
 echo "==> Linking chromium and obsidian flags..."
 ln -sfn "$DOTFILES/chromium/config/chromium-flags.conf" "$HOME/.config/"
 ln -sfn "$DOTFILES/obsidian/config/user-flags.conf" "$HOME/.config/obsidian/"
+sudo mkdir -p /etc/chromium/policies/managed
+sudo chown -R "$USER" /etc/chromium/policies/managed
 
 echo "==> Done!"
