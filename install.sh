@@ -26,6 +26,7 @@ ln -sfn "$DOTFILES/local/share/applications" "$HOME/.local/share/applications"
 
 echo "==> Linking noctalia shell settings..."
 ln -sfn "$DOTFILES/noctalia-shell/config/noctalia/settings.json" "$HOME/.config/noctalia"
+ln -sfn "$DOTFILES/noctalia-shell/config/noctalia/user-templates.toml" "$HOME/.config/noctalia"
 
 echo "==> Linking chromium-flags..."
 ln -sfn "$DOTFILES/chromium/config/chromium-flags.conf" "$HOME/.config/"
