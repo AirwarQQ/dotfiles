@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Claude
+Comment=Claude
+Exec=uwsm-app -- chromium --app=https://claude.ai
+Terminal=false
+Type=Application
+Icon=/home/airwar/.local/share/applications/icons/Claude.png
+StartupNotify=true
