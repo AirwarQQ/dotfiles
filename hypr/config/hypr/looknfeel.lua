@@ -60,11 +60,21 @@ hl.config({
 
 		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
 		resize_on_border = true,
+		extend_border_grab_area = 30,
+		hover_icon_on_border = false,
+		resize_corner = 3,
 
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
 		allow_tearing = false,
 
 		layout = "dwindle",
+		snap = {
+			enabled = true,
+			window_gap = 10,
+			monitor_gap = 10,
+			border_overlap = false,
+			respect_gaps = true, -- если используешь gaps_in
+		},
 	},
 
 	decoration = {

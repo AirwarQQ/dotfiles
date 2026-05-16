@@ -15,6 +15,9 @@ hl.bind(MAINMOD .. " + P", hl.dsp.window.pseudo())
 hl.bind(MAINMOD .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(MAINMOD .. " + U", hl.dsp.focus({ urgent_or_last = true }))
 
+-- gaming
+hl.bind(MAINMOD .. " + G", hl.dsp.focus({ workspace = "name:game" }))
+hl.bind(MAINMOD .. " + SHIFT + G", hl.dsp.window.move({ workspace = "name:game", follow = false }))
 -- hidden place
 hl.bind(MAINMOD .. " + H", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(MAINMOD .. " + SHIFT + H", hl.dsp.window.move({ workspace = "special:magic", follow = false }))

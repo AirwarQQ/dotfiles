@@ -1,3 +1,4 @@
+require("apps.satty")
 -- SCREENSHOTS
 
 -- local screenshot_region = "hyprshot -m region" -- выделить область, сохранить + копировать

@@ -1,6 +1,9 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+LEFT_MONITOR = "DP-2"
+RIGHT_MONITOR = "DP-3"
+
 hl.monitor({
-	output = "DP-3",
+	output = RIGHT_MONITOR,
 	mode = "3840x2160@239.99",
 	position = "1152x608",
 	-- position = "auto",
@@ -10,7 +13,7 @@ hl.monitor({
 })
 
 hl.monitor({
-	output = "DP-2",
+	output = LEFT_MONITOR,
 	mode = "2560x1440@143.97",
 	-- position = "auto",
 	position = "0x0",

@@ -1,15 +1,44 @@
 # Float Steam
--- windowrule = float on, match:class steam
--- windowrule = center on, match:class steam, match:title Steam
--- windowrule = tag -default-opacity, match:class steam.*
--- windowrule = opacity 1 1, match:class steam.*
--- # windowrule = size 1100 700, match:class steam, match:title Steam
--- windowrule = size 460 800, match:class steam, match:title Friends List
--- windowrule = idle_inhibit fullscreen, match:class steam
+hl.workspace_rule({
+  workspace = "name:game",
+  monitor = RIGHT_MONITOR,
+  persistent = false,
 
--- hl.window_rule({
---  float on, match:class steam
--- })
+})
+
+hl.window_rule({
+  -- workspace = "name:game",
+  match = {
+  class = "steam",
+  title = "Steam",
+  },
+  tag = "-default-opacity",
+ float = true,
+  -- center = true,
+  monitor = RIGHT_MONITOR,
+  min_size = {"1550", "900"}
+})
+
+hl.window_rule({
+  -- workspace = "name:game",
+  match = {
+  class = "steam",
+  title = "Friends List",
+  },
+  tag = "-default-opacity",
+  float = true,
+  -- center = true,
+  monitor = RIGHT_MONITOR,
+  size = {"400", "800"},
+  -- min_size = {"460", "200"}
+})
+
+hl.window_rule({
+  match = {
+class = "_steam_app_.*$",
+  },
+  tag = "gaming"
+})
 
 
 -- # steam game
