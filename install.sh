@@ -4,12 +4,12 @@ set -euo pipefail
 
 DOTFILES="$HOME/dotfiles"
 
-# echo "==> Installing packages..."
-# if [ -f "$DOTFILES/packages.txt" ]; then
-#   grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
-# else
-#   echo "  warn: packages.txt not found, skipping"
-# fi
+echo "==> Installing packages..."
+if [ -f "$DOTFILES/packages.txt" ]; then
+  grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
+else
+  echo "  warn: packages.txt not found, skipping"
+fi
 
 echo "==> Creating directories..."
 mkdir -p "$HOME/.config/fish/conf.d"

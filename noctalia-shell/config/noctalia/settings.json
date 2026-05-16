@@ -868,7 +868,7 @@
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
-        "startup": "sleep 1 && qs -c noctalia-shell ipc call lockScreen lock",
+        "startup": "qs -c noctalia-shell ipc call lockScreen lock",
         "wallpaperChange": ""
     },
     "idle": {
@@ -1099,6 +1099,18 @@
             {
                 "enabled": true,
                 "id": "steam"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "kcolorscheme"
+            },
+            {
+                "enabled": true,
+                "id": "hyprtoolkit"
             }
         ],
         "enableUserTheming": true
