@@ -346,18 +346,6 @@
                             "usePadding": false
                         },
                         {
-                            "displayMode": "onhover",
-                            "iconColor": "none",
-                            "id": "Bluetooth",
-                            "textColor": "none"
-                        },
-                        {
-                            "displayMode": "alwaysHide",
-                            "iconColor": "none",
-                            "id": "Network",
-                            "textColor": "none"
-                        },
-                        {
                             "id": "plugin:network-manager-vpn"
                         },
                         {
@@ -366,9 +354,6 @@
                             "id": "KeyboardLayout",
                             "showIcon": true,
                             "textColor": "none"
-                        },
-                        {
-                            "id": "plugin:hyprland-steam-overlay"
                         }
                     ]
                 }
@@ -496,9 +481,6 @@
                             "id": "KeyboardLayout",
                             "showIcon": true,
                             "textColor": "none"
-                        },
-                        {
-                            "id": "plugin:hyprland-steam-overlay"
                         }
                     ]
                 }
@@ -667,18 +649,6 @@
                         "displayMode": "onhover"
                     },
                     "id": "plugin:network-manager-vpn"
-                },
-                {
-                    "defaultSettings": {
-                        "autoLaunchSteam": true,
-                        "chatWidthPercent": 25,
-                        "friendsWidthPercent": 10,
-                        "gapSize": 10,
-                        "mainWidthPercent": 60,
-                        "topMarginPercent": 2.5,
-                        "windowHeightPercent": 95
-                    },
-                    "id": "plugin:hyprland-steam-overlay"
                 }
             ]
         }
