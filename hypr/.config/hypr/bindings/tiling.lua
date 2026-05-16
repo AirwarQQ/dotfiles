@@ -14,8 +14,10 @@ hl.bind(MAINMOD .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(MAINMOD .. " + P", hl.dsp.window.pseudo())
 hl.bind(MAINMOD .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(MAINMOD .. " + U", hl.dsp.focus({ urgent_or_last = true }))
-hl.bind(MAINMOD .. " + S", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(MAINMOD .. " + SHIFT + H", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(MAINMOD .. " + H", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(MAINMOD .. " + SHIFT + H", hl.dsp.window.move({ workspace = "special:magic", follow = false }))
+hl.bind(MAINMOD .. " + S", hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind(MAINMOD .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:scratchpad", follow = false }))
 
 -- Move focus with MAINMOD + arrow keys
 hl.bind(MAINMOD .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -29,6 +31,7 @@ for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
 	hl.bind(MAINMOD .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(MAINMOD .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+	hl.bind(MAINMOD .. " + CTRL + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 -- Move/resize windows with MAINMOD + LMB/RMB and dragging
