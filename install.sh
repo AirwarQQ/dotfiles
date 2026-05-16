@@ -24,6 +24,9 @@ ln -sfn "$DOTFILES/hypr/config/hypr" "$HOME/.config/hypr"
 echo "==> Linking .local/share/applications..."
 ln -sfn "$DOTFILES/local/share/applications" "$HOME/.local/share/applications"
 
+echo "==> Linking .local/bin/..."
+ln -sfn "$DOTFILES/local/bin" "$HOME/.local/bin"
+
 echo "==> Linking noctalia shell settings..."
 ln -sfn "$DOTFILES/noctalia-shell/config/noctalia/settings.json" "$HOME/.config/noctalia"
 ln -sfn "$DOTFILES/noctalia-shell/config/noctalia/user-templates.toml" "$HOME/.config/noctalia"

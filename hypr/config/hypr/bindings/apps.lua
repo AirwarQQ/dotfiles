@@ -13,12 +13,13 @@ local browser = "uwsm-app -- chromium"
 local browser_privat = "uwsm-app -- chromium --incognito"
 local filemanager = "uwsm-app -- nautilus"
 local music_app = "uwsm-app -- yandexmusic.desktop"
+local discord = "uwsm-app -- vesktop"
 local obsidian = "uwsm-app -- obsidian"
 local music_tui = terminal .. " -e cliamp"
 -- local btop = terminal .. " -e btop"
 local messanger = "uwsm-app -- Telegram"
-local youtube = "uwsm-app -- YouTube.desktop"
-local claude = "uwsm-app -- Claude.desktop"
+local youtube = { cmd = "uwsm-app -- YouTube.desktop", class = "chrome-youtube.com__-Default" }
+local claude = { cmd = "uwsm-app -- Claude.desktop", class = "chrome-claude.ai__-Default" }
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -31,6 +32,7 @@ hl.bind(MAINMOD .. " + SHIFT + B", hl.dsp.exec_cmd(browser_privat))
 hl.bind(MAINMOD .. " + E", hl.dsp.exec_cmd(filemanager))
 hl.bind(MAINMOD .. " + M", music.toggle(music_app))
 hl.bind(MAINMOD .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(MAINMOD .. " + D", hl.dsp.exec_cmd(discord))
 hl.bind(MAINMOD .. " + T", hl.dsp.exec_cmd(messanger))
 hl.bind(MAINMOD .. " + ALT + M", hl.dsp.exec_cmd(music_tui))
 hl.bind(
@@ -42,8 +44,20 @@ hl.bind(
 )
 
 -- web apps
-hl.bind(MAINMOD .. " + SHIFT + Y", hl.dsp.exec_cmd(youtube))
-hl.bind(MAINMOD .. " + SHIFT + A", hl.dsp.exec_cmd(claude))
+hl.bind(
+	MAINMOD .. " + SHIFT + Y",
+	launch_or_focus.app({
+		class = youtube.class,
+		cmd = youtube.cmd,
+	})
+)
+hl.bind(
+	MAINMOD .. " + SHIFT + A",
+	launch_or_focus.app({
+		class = claude.class,
+		cmd = claude.cmd,
+	})
+)
 -- hl.bind(
 -- 	MAINMOD .. " + M",
 -- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
@@ -63,21 +77,6 @@ function debughandler.toggle()
 end
 hl.bind(MAINMOD .. " + F12", debughandler.toggle)
 
---
--- # If your web app url contains #, type it as ## to prevent hyprland treating it as a comment
--- bindd = SUPER SHIFT, A, ChatGPT, exec, omarchy-launch-webapp "https://chatgpt.com"
--- bindd = SUPER SHIFT ALT, A, Grok, exec, omarchy-launch-webapp "https://grok.com"
--- bindd = SUPER SHIFT, C, Calendar, exec, omarchy-launch-webapp "https://app.hey.com/calendar/weeks/"
--- bindd = SUPER SHIFT, E, Email, exec, omarchy-launch-webapp "https://app.hey.com"
--- bindd = SUPER SHIFT, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/"
--- bindd = SUPER SHIFT ALT, G, WhatsApp, exec, omarchy-launch-or-focus-webapp WhatsApp "https://web.whatsapp.com/"
--- bindd = SUPER SHIFT CTRL, G, Google Messages, exec, omarchy-launch-or-focus-webapp "Google Messages" "https://messages.google.com/web/conversations"
--- bindd = SUPER SHIFT, P, Google Photos, exec, omarchy-launch-or-focus-webapp "Google Photos" "https://photos.google.com/"
--- bindd = SUPER SHIFT, X, X, exec, omarchy-launch-webapp "https://x.com/"
--- bindd = SUPER SHIFT ALT, X, X Post, exec, omarchy-launch-webapp "https://x.com/compose/post"
---
--- # Add extra bindings
--- # bind = SUPER SHIFT, R, exec, alacritty -e ssh your-server
 --
 -- # Overwrite existing bindings, like putting Omarchy Menu on Super + Space
 -- # unbind = SUPER, SPACE
