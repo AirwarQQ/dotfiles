@@ -13,22 +13,21 @@ fi
 
 echo "==> Creating directories..."
 mkdir -p "$HOME/.config/fish/conf.d"
-mkdir -p "$HOME/.config/hypr"
 mkdir -p "$HOME/.local/share"
 
 echo "==> Linking fish config..."
-ln -sfn "$DOTFILES/fish/.config/fish/conf.d/aliases.fish" "$HOME/.config/fish/conf.d/aliases.fish"
+ln -sfn "$DOTFILES/fish/config/fish/conf.d/aliases.fish" "$HOME/.config/fish/conf.d/aliases.fish"
 
 echo "==> Linking hypr config..."
-ln -sfn "$DOTFILES/hypr/.config/hypr" "$HOME/.config/hypr"
+ln -sfn "$DOTFILES/hypr/config/hypr" "$HOME/.config/hypr"
 
 echo "==> Linking .local/share/applications..."
-ln -sfn "$DOTFILES/.local/share/applications" "$HOME/.local/share/applications"
+ln -sfn "$DOTFILES/local/share/applications" "$HOME/.local/share/applications"
 
 echo "==> Linking noctalia shell settings..."
-ln -sfn "$DOTFILES/noctalia-shell/.config/noctalia/settings.json" "$HOME/.config/noctalia"
+ln -sfn "$DOTFILES/noctalia-shell/config/noctalia/settings.json" "$HOME/.config/noctalia"
 
 echo "==> Linking chromium-flags..."
-ln -sfn "$DOTFILES/chromium/chromium-flags.conf" "$HOME/.config/"
+ln -sfn "$DOTFILES/chromium/config/chromium-flags.conf" "$HOME/.config/"
 
 echo "==> Done!"
