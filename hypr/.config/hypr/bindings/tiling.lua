@@ -1,5 +1,4 @@
 -- ESSENTIALS
-
 hl.bind(MAINMOD .. " + W", hl.dsp.window.close())
 -- TODO: finish closing YandexMusic
 -- hl.bind(MAINMOD .. " + W", function()
@@ -14,6 +13,9 @@ hl.bind(MAINMOD .. " + W", hl.dsp.window.close())
 hl.bind(MAINMOD .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(MAINMOD .. " + P", hl.dsp.window.pseudo())
 hl.bind(MAINMOD .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(MAINMOD .. " + U", hl.dsp.focus({ urgent_or_last = true }))
+hl.bind(MAINMOD .. " + S", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(MAINMOD .. " + SHIFT + H", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Move focus with MAINMOD + arrow keys
 hl.bind(MAINMOD .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -29,14 +31,29 @@ for i = 1, 10 do
 	hl.bind(MAINMOD .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
--- Example special workspace (scratchpad)
-hl.bind(MAINMOD .. " + H", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(MAINMOD .. " + SHIFT + H", hl.dsp.window.move({ workspace = "special:magic" }))
-
--- Scroll through existing workspaces with MAINMOD + scroll
-hl.bind(MAINMOD .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(MAINMOD .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
-
 -- Move/resize windows with MAINMOD + LMB/RMB and dragging
 hl.bind(MAINMOD .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(MAINMOD .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- TAB between workspaces
+hl.bind(MAINMOD .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(MAINMOD .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(MAINMOD .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(MAINMOD .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(MAINMOD .. " + CTRL + TAB", hl.dsp.focus({ last = true }))
+
+-- To switch between windows in a floating workspace:
+hl.bind("ALT + Tab", function()
+	hl.dispatch(hl.dsp.window.cycle_next()) -- Change focus to another window
+	hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+end)
+hl.bind("ALT + SHIFT+ Tab", function()
+	hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+	hl.dispatch(hl.dsp.window.cycle_next()) -- Change focus to another window
+end)
+
+-- Resize active window
+hl.bind(MAINMOD .. " + code:20", hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
+hl.bind(MAINMOD .. " + code:21", hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
+hl.bind(MAINMOD .. " + SHIFT + code:20", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
+hl.bind(MAINMOD .. " + SHIFT + code:21", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
