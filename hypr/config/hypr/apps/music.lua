@@ -1,5 +1,14 @@
+-- TODO: add spotify support
+-- hl.window_rule({
+-- 	name = "tag music apps",
+-- 	tag = "+music",
+-- 	match = {
+-- 		class = "^(YandexMusic|Spotify)$",
+-- 	},
+-- })
+
 hl.window_rule({
-	name = "yandex-music-rule",
+	name = "music-rule",
 	monitor = "DP-2",
 	match = {
 		class = "^(YandexMusic)$",

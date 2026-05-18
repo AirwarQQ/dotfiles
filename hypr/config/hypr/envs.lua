@@ -7,10 +7,10 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.env("GDK_SCALE", RIGHT_MONITOR_SCALE)
 
-hl.env("LIBVA_DRIVER_NAME", "nvidia")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-hl.env("NVD_BACKEND", "direct")
+hl.env("LIBVA_DRIVER_NAME", "nvidia") -- nvidia things
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia") -- nvidia things
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto") -- electron/cef apps flickering fix
+hl.env("NVD_BACKEND", "direct") -- VA-API hardware video acceleration
 
 hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 

@@ -12,6 +12,7 @@ yazi
 cliamp
 imv
 socat
+spotify-launcher
 
 # === Window Manager ===
 noctalia-shell

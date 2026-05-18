@@ -56,8 +56,8 @@ fi
 
 if confirm "Link chromium and obsidian flags?"; then
   echo "==> Linking chromium and obsidian flags..."
-  ln -sfn "$DOTFILES/chromium/config/chromium-flags.conf" "$HOME/.config/"
-  ln -sfn "$DOTFILES/obsidian/config/user-flags.conf" "$HOME/.config/obsidian/"
+  ln -sfn "$DOTFILES/chromium/config/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
+  ln -sfn "$DOTFILES/obsidian/config/user-flags.conf" "$HOME/.config/obsidian/user-flags.conf"
 fi
 
 if confirm "Install noctalia chromium theme?"; then
@@ -67,4 +67,22 @@ if confirm "Install noctalia chromium theme?"; then
   "$DOTFILES"/local/bin/update-chromium-theme
 fi
 
+if confirm "Link spotify-launcher.conf (or check hypr wiki and do yourself)?"; then
+  echo "==> Linking spotify-launcher.conf..."
+  ln -sfn "$DOTFILES/spotify/config/spotify-launcher.conf" "$HOME/.config/spotify-launcher.conf"
+fi
+
+if confirm "Replace cachyos plymouth splash with chocola?"; then
+  echo "==> Replacing plymouth splash..."
+  sudo plymouth-set-default-theme -R themename
+fi
+
+echo "==> [WARINING!] Dont forget to add:"
+echo "==> [WARINING!] MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)"
+echo "==> [WARINING!] to file /etc/mkinitcpio.conf "
+echo "==> [WARINING!] Dont forget to check /etc/modprobe.d/nvidia.conf"
+echo "==> [WARINING!] it should has:"
+echo "==> [WARINING!] options nvidia_drm modeset=1"
+echo "==> [WARINING!] then do 'sudo mkinitcpio -P'"
+echo ""
 echo "==> Done!"
