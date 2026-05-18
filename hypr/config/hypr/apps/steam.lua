@@ -1,45 +1,79 @@
-# Float Steam
+-- # Float Steam
+hl.window_rule({
+	-- workspace = "name:game",
+	match = {
+		class = "steam",
+		title = "Steam",
+	},
+	tag = "-default-opacity",
+	float = true,
+	-- center = true,
+	-- monitor = RIGHT_MONITOR,
+	min_size = { "1550", "900" },
+	suppress_event = "activate",
+})
+
+hl.window_rule({
+	-- workspace = "name:game",
+	match = {
+		class = "steam",
+		title = "Friends List",
+	},
+	tag = "-default-opacity",
+	float = true,
+	-- center = true,
+	-- monitor = RIGHT_MONITOR,
+	size = { "400", "800" },
+	-- min_size = {"460", "200"}
+})
+
+-- Game workspace
+-- socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock
+hl.window_rule({
+	match = {
+		class = "^steam_app_.*$",
+	},
+	tag = "+game",
+	workspace = "name:game",
+	-- stay_focused = true,
+	-- monitor = RIGHT_MONITOR,
+	-- fullscreen = true,
+	-- fullscreen_state = "2 2",
+})
+
 hl.workspace_rule({
-  workspace = "name:game",
-  monitor = RIGHT_MONITOR,
-  persistent = false,
-
+	workspace = "name:game",
+	monitor = RIGHT_MONITOR,
+	persistent = false,
 })
 
-hl.window_rule({
-  -- workspace = "name:game",
-  match = {
-  class = "steam",
-  title = "Steam",
-  },
-  tag = "-default-opacity",
- float = true,
-  -- center = true,
-  monitor = RIGHT_MONITOR,
-  min_size = {"1550", "900"}
-})
+-- hl.on("window.fullscreen", function(w)
+-- 	if w.tags then
+-- 		for _, t in ipairs(w.tags) do
+-- 			if t == "game*" or t == "game" then
+-- 				hl.dispatch(hl.dsp.focus({ window = w }))
+-- 				-- hl.dispatch(hl.dsp.focus({ window = w }))
+-- 				break
+-- 			end
+-- 		end
+-- 	end
+-- end)
+hl.on("window.fullscreen", function(w)
+	if w.tags then
+		for _, t in ipairs(w.tags) do
+			if t == "game*" or t == "game" then
+				hl.dispatch(hl.dsp.focus({ window = w }))
+				-- hl.dispatch(hl.dsp.focus({ window = w }))
+				break
+			end
+		end
+	end
+end)
 
-hl.window_rule({
-  -- workspace = "name:game",
-  match = {
-  class = "steam",
-  title = "Friends List",
-  },
-  tag = "-default-opacity",
-  float = true,
-  -- center = true,
-  monitor = RIGHT_MONITOR,
-  size = {"400", "800"},
-  -- min_size = {"460", "200"}
-})
-
-hl.window_rule({
-  match = {
-class = "_steam_app_.*$",
-  },
-  tag = "gaming"
-})
-
+-- Fix steam games resolution
+hl.on("hyprland.start", function()
+	hl.exec_cmd("xrandr --output " .. RIGHT_MONITOR .. " --primary")
+end)
 
 -- # steam game
 -- workspace = name:game, monitor:DP-3, persistent:false
@@ -50,4 +84,3 @@ class = "_steam_app_.*$",
 -- binds {
 --     disable_keybind_grabbing = true
 -- }
-

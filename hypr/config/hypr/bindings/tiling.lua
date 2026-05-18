@@ -47,6 +47,7 @@ hl.bind(MAINMOD .. " + SHIFT + CTRL + down", hl.dsp.window.move({ monitor = "d" 
 -- Fullscreen
 hl.bind("ALT + F11", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 hl.bind("SHIFT + F11", hl.dsp.window.fullscreen({ mode = "maximized" }))
+hl.bind("CTRL + F11", hl.dsp.window.fullscreen_state({ internal = 2, client = 2 }))
 -- hl.bind(MAINMOD .. " + ALT + SHIFT + F11", hl.dsp.focus({ urgent_or_last = true }))
 
 -- Switch workspaces with MAINMOD + [0-9]

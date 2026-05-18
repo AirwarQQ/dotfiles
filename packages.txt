@@ -10,6 +10,8 @@ vesktop
 yandex-music
 yazi
 cliamp
+imv
+socat
 
 # === Window Manager ===
 noctalia-shell

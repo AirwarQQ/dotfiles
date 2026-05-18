@@ -868,7 +868,7 @@
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
-        "startup": "qs -c noctalia-shell ipc call lockScreen lock",
+        "startup": "sleep 1 && qs -c noctalia-shell ipc call lockScreen lock",
         "wallpaperChange": ""
     },
     "idle": {
@@ -1165,10 +1165,7 @@
         "transitionDuration": 2000,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "disc",
-            "stripes",
-            "honeycomb",
-            "wipe"
+            "stripes"
         ],
         "useOriginalImages": false,
         "useSolidColor": false,

@@ -1,13 +1,22 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 LEFT_MONITOR = "DP-2"
 RIGHT_MONITOR = "DP-3"
+RIGHT_MONITOR_SCALE = "1.5"
+LEFT_MONITOR_SCALE = "1.25"
+
+hl.monitor({
+	output = "",
+	mode = "preferred",
+	position = "auto",
+	scale = "auto",
+})
 
 hl.monitor({
 	output = RIGHT_MONITOR,
 	mode = "3840x2160@239.99",
 	position = "1152x608",
 	-- position = "auto",
-	scale = "1.5",
+	scale = RIGHT_MONITOR_SCALE,
 	bitdepth = 10,
 	-- cm = "srgb",
 })
@@ -17,7 +26,7 @@ hl.monitor({
 	mode = "2560x1440@143.97",
 	-- position = "auto",
 	position = "0x0",
-	scale = "1.25",
+	scale = LEFT_MONITOR_SCALE,
 	transform = 3,
 })
 
