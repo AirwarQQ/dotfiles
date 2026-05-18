@@ -47,6 +47,13 @@ if confirm "Configure git user?"; then
   fi
 fi
 
+if confirm "Link nvim conf with LazyVim?"; then
+  echo "==> Linking nvim conf..."
+  ln -sfn "$DOTFILES/nvim/config/nvim" "$HOME/.config/nvim"
+  echo "==> Restoring nvim plugins from lazy-lock.json..."
+  nvim --headless "+Lazy! restore" +qa
+fi
+
 if confirm "Link sddm autologin conf?"; then
   echo "==> Linking sddm autologin config..."
   sudo mkdir -p "/etc/sddm.conf.d"

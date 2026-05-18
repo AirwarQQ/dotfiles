@@ -2,8 +2,7 @@
 *.log
 tmp/
 
-nvim/config/nvim/LICENCE
-nvim/config/nvim/.gitignore
+nvim/config/nvim/LICENSE
 nvim/config/nvim/README.md
 
 local/share/applications/*
