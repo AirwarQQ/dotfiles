@@ -1,4 +1,10 @@
 **/mimeinfo.cache
+*.log
+tmp/
+
+nvim/config/nvim/LICENCE
+nvim/config/nvim/.gitignore
+nvim/config/nvim/README.md
 
 local/share/applications/*
 !local/share/applications/vesktop.desktop
