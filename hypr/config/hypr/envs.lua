@@ -10,16 +10,16 @@ hl.env("GDK_SCALE", RIGHT_MONITOR_SCALE)
 hl.env("LIBVA_DRIVER_NAME", "nvidia") -- nvidia things
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia") -- nvidia things
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto") -- electron/cef apps flickering fix
+-- hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland") -- deprecated as i know
 hl.env("NVD_BACKEND", "direct") -- VA-API hardware video acceleration
 
-hl.env("WLR_NO_HARDWARE_CURSORS", "1")
+-- hl.env("WLR_NO_HARDWARE_CURSORS", "1") -- mouse boundries fix
 
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
 hl.env("OZONE_PLATFORM", "wayland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 

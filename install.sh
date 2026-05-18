@@ -20,6 +20,33 @@ if confirm "Intall packages?"; then
   fi
 fi
 
+if confirm "Configure git user?"; then
+  echo "==> Configuring git user..."
+
+  current_name=$(git config --global --default "" user.name)
+  current_email=$(git config --global --default "" user.email)
+
+  if [ -n "$current_name" ]; then
+    echo "  current name: $current_name"
+    read -rp "  new name (leave empty to keep): " new_name
+  else
+    read -rp "  git user.name: " new_name
+  fi
+  if [ -n "$new_name" ]; then
+    git config --global user.name "$new_name"
+  fi
+
+  if [ -n "$current_email" ]; then
+    echo "  current email: $current_email"
+    read -rp "  new email (leave empty to keep): " new_email
+  else
+    read -rp "  git user.email: " new_email
+  fi
+  if [ -n "$new_email" ]; then
+    git config --global user.email "$new_email"
+  fi
+fi
+
 if confirm "Link sddm autologin conf?"; then
   echo "==> Linking sddm autologin config..."
   sudo mkdir -p "/etc/sddm.conf.d"
@@ -77,6 +104,13 @@ if confirm "Replace cachyos plymouth splash with chocola?"; then
   sudo plymouth-set-default-theme -R themename
 fi
 
+if confirm "Link mimeapps.list?"; then
+  echo "==> Linking mimeapps.list..."
+  ln -sfn "$DOTFILES/config/mimeapps.list" "$HOME/.config/mimeapps.list"
+fi
+
+echo "==> Done!"
+echo ""
 echo "==> [WARINING!] Dont forget to add:"
 echo "==> [WARINING!] MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)"
 echo "==> [WARINING!] to file /etc/mkinitcpio.conf "
@@ -84,5 +118,4 @@ echo "==> [WARINING!] Dont forget to check /etc/modprobe.d/nvidia.conf"
 echo "==> [WARINING!] it should has:"
 echo "==> [WARINING!] options nvidia_drm modeset=1"
 echo "==> [WARINING!] then do 'sudo mkinitcpio -P'"
-echo ""
 echo "==> Done!"
