@@ -1,6 +1,5 @@
 require("apps.steam")
 require("apps.webapp_install")
-require("apps.steam")
 local music = require("apps.music")
 local launch_or_focus = require("apps.launch_or_focus")
 MAINMOD = "SUPER" -- Sets "Windows" key as main modifier
