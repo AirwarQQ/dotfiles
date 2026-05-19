@@ -8,6 +8,9 @@ local notification_hist = ipc .. "notifications toggleHistory"
 
 hl.bind(MAINMOD .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(MAINMOD .. " + SHIFT + L", hl.dsp.exec_cmd(lockscreen))
-hl.bind(MAINMOD .. " + ESCAPE", hl.dsp.exec_cmd(session_menu))
+hl.bind(MAINMOD .. " + ESCAPE", function()
+	hl.dispatch(hl.dsp.focus({ monitor = RIGHT_MONITOR }))
+	hl.dispatch(hl.dsp.exec_cmd(session_menu))
+end)
 hl.bind(MAINMOD .. " + N", hl.dsp.exec_cmd(notification_hist))
 hl.bind(MAINMOD .. " + SHIFT + SPACE", hl.dsp.exec_cmd(bar_toogle))
