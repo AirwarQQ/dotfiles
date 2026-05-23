@@ -1,3 +1,4 @@
+require("var")
 require("monitors")
 require("autostart")
 require("windowrules")

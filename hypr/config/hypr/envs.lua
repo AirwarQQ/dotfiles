@@ -5,7 +5,7 @@
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
-hl.env("GDK_SCALE", RIGHT_MONITOR_SCALE)
+hl.env("GDK_SCALE", GDK_SCALE)
 
 hl.env("LIBVA_DRIVER_NAME", "nvidia") -- nvidia things
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia") -- nvidia things

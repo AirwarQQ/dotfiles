@@ -1,0 +1,7 @@
+MAINMOD = "SUPER" -- Sets "Windows" key as main modifier
+
+LEFT_MONITOR = "DP-2"
+RIGHT_MONITOR = "DP-3"
+RIGHT_MONITOR_SCALE = "1.5"
+LEFT_MONITOR_SCALE = "1.25"
+GDK_SCALE = 1.5
