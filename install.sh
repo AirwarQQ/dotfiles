@@ -19,7 +19,9 @@ confirm() {
 }
 
 backup_if_real() {
-  [[ -e "$1" && ! -L "$1" ]] && mv -v "$1" "$1.bak.$(date +%s)"
+  if [[ -e "$1" && ! -L "$1" ]]; then
+    mv -v "$1" "$1.bak.$(date +%s)"
+  fi
 }
 
 if confirm "Intall packages?" n; then
@@ -67,6 +69,12 @@ if confirm "Link nvim conf with LazyVim?" n; then
   nvim --headless "+Lazy! restore" "+qa"
 fi
 
+if confirm "Link alacritty conf?" n; then
+  echo "==> Linking alacritty conf..."
+  backup_if_real "$HOME/.config/alacritty"
+  ln -sfn "$DOTFILES/alacritty/config/alacritty" "$HOME/.config/alacritty"
+fi
+
 if confirm "Link sddm autologin conf?" n; then
   echo "==> Linking sddm autologin config..."
   sudo mkdir -p "/etc/sddm.conf.d"
@@ -77,6 +85,9 @@ if confirm "Link fish config?" n; then
   echo "==> Linking fish config..."
   mkdir -p "$HOME/.config/fish/conf.d"
   ln -sfn "$DOTFILES/fish/config/fish/conf.d/aliases.fish" "$HOME/.config/fish/conf.d/aliases.fish"
+  ln -sfn "$DOTFILES/fish/config/fish/conf.d/starship.fish" "$HOME/.config/fish/conf.d/starship.fish"
+  backup_if_real "$HOME/.config/starship.toml"
+  ln -sfn "$DOTFILES/fish/config/starship.toml" "$HOME/.config/starship.toml"
 fi
 
 if confirm "Link hypr config?" n; then
