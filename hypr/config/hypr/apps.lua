@@ -1,0 +1,5 @@
+require("apps.steam")
+require("apps.webapp_install")
+require("apps.terminals")
+require("apps.browser")
+require("apps.system")

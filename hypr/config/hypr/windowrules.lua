@@ -74,3 +74,17 @@ hl.window_rule({
 	float = true,
 	center = true,
 })
+
+hl.window_rule({
+	match = {
+		class = ".*",
+	},
+	tag = "+default-opacity",
+})
+
+hl.window_rule({
+	match = {
+		tag = "default-opacity",
+	},
+	opacity = "0.97 0.9",
+})

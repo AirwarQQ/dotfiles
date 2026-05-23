@@ -11,6 +11,7 @@ hl.window_rule({
 	-- monitor = RIGHT_MONITOR,
 	min_size = { "1550", "900" },
 	suppress_event = "activate",
+	opacity = "1 1",
 })
 
 hl.window_rule({
@@ -25,6 +26,7 @@ hl.window_rule({
 	-- monitor = RIGHT_MONITOR,
 	size = { "400", "800" },
 	-- min_size = {"460", "200"}
+	opacity = "1 1",
 })
 
 -- Game workspace
@@ -35,6 +37,7 @@ hl.window_rule({
 	},
 	tag = "+game",
 	workspace = "name:game",
+	opacity = "1 1",
 	-- stay_focused = true,
 	-- monitor = RIGHT_MONITOR,
 	-- fullscreen = true,
