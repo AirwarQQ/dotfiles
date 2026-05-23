@@ -199,9 +199,6 @@
                             "textColor": "none"
                         },
                         {
-                            "id": "plugin:hyprland-steam-overlay"
-                        },
-                        {
                             "id": "plugin:network-manager-vpn"
                         }
                     ]
@@ -402,7 +399,7 @@
                     ],
                     "left": [
                         {
-                            "characterCount": 2,
+                            "characterCount": 4,
                             "colorizeIcons": false,
                             "emptyColor": "secondary",
                             "enableScrollWheel": true,
@@ -413,7 +410,7 @@
                             "hideUnoccupied": false,
                             "iconScale": 0.8,
                             "id": "Workspace",
-                            "labelMode": "index",
+                            "labelMode": "name",
                             "occupiedColor": "secondary",
                             "pillSize": 0.6,
                             "showApplications": false,
