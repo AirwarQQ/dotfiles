@@ -68,8 +68,8 @@ hl.window_rule({
 	size = { "1318", "1120" },
 	opacity = "1 1",
 })
+
 -- Game workspace
--- socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock
 hl.window_rule({
 	match = {
 		class = "^steam_app_.*$",
