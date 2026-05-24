@@ -1,4 +1,16 @@
 -- # Float Steam
+
+local steam_main_size_x = "1861"
+local steam_main_size_y = "1386"
+local steam_main_pos_x = "1164"
+local steam_main_pos_y = "650"
+local steam_friends_size_x = "661"
+local steam_friends_size_y = "1386"
+local steam_friends_pos_x = "3039"
+local steam_friends_pos_y = "650"
+
+--
+--
 hl.window_rule({
 	-- workspace = "name:game",
 	match = {
@@ -14,8 +26,8 @@ hl.window_rule({
 	-- center = true,
 	-- monitor = RIGHT_MONITOR,
 	-- workspace = "name:game",
-	size = { "1928", "1386" },
-	-- move = { "0", "0" },
+	size = { steam_main_size_x, steam_main_size_y },
+	move = { steam_main_pos_x .. "-" .. RIGHT_MONITOR_POS_X, steam_main_pos_y .. "-" .. RIGHT_MONITOR_POS_Y },
 	-- suppress_event = "activate",
 })
 
@@ -31,7 +43,8 @@ hl.window_rule({
 	-- tile = true,
 	-- center = true,
 	-- monitor = RIGHT_MONITOR,
-	-- size = { "400", "800" },
+	size = { steam_friends_size_x, steam_friends_size_y },
+	move = { steam_friends_pos_x .. "-" .. RIGHT_MONITOR_POS_X, steam_friends_pos_y .. "-" .. RIGHT_MONITOR_POS_Y },
 	-- min_size = {"460", "200"}
 	-- max_size = { "460", "200" },
 	opacity = "1 1",

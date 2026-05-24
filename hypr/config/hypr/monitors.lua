@@ -10,7 +10,7 @@ hl.monitor({
 hl.monitor({
 	output = RIGHT_MONITOR,
 	mode = "3840x2160@239.99",
-	position = "1152x608",
+	position = RIGHT_MONITOR_POS_X .. "x" .. RIGHT_MONITOR_POS_Y,
 	-- position = "auto",
 	scale = RIGHT_MONITOR_SCALE,
 	bitdepth = 10,
