@@ -14,7 +14,7 @@ hl.window_rule({
 	-- center = true,
 	-- monitor = RIGHT_MONITOR,
 	-- workspace = "name:game",
-	-- size = { "1928", "1386" },
+	size = { "1928", "1386" },
 	-- move = { "0", "0" },
 	-- suppress_event = "activate",
 })

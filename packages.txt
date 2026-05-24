@@ -12,8 +12,16 @@ yandex-music
 yazi
 cliamp
 imv
+mpv
 socat
 spotify-launcher
+pinta
+gpu-screen-recorder
+localsend
+nautilus
+sushi
+ffmpegthumbnailer
+gnome-disk-utility
 
 # === Window Manager ===
 noctalia-shell
