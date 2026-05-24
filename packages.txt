@@ -1,41 +1,78 @@
-# === Essential ===
-alacritty
-starship
-chromium
-github-cli
-lazygit
-lianli-linux-git
-libreoffice-fresh
-neovim
-vesktop
-yandex-music
-yazi
-cliamp
-imv
-mpv
-socat
-spotify-launcher
-pinta
-gpu-screen-recorder
-localsend
-nautilus
-sushi
-ffmpegthumbnailer
-gnome-disk-utility
+# === Terminal & Shell ===
+alacritty                            # terminal emulator
+starship                             # prompt (terminal status line)
 
-# === Window Manager ===
-noctalia-shell
-ttf-jetbrains-mono-nerd
-adw-gtk-theme
-cliphist
-egl-wayland
-plymouth-theme-nekopara-chocola-git
-satty
-hyprland-preview-share-picker-git
-gum
+# === Browser ===
+chromium
+
+# === Development ===
+neovim                               # modal text editor
+lazygit                              # TUI wrapper for git
+github-cli                           # GitHub CLI (gh)
+
+# === Hyprland / Wayland environment ===
+noctalia-shell                       # Quickshell-based shell
+cliphist                             # clipboard history
+satty                                # screenshot annotation tool
+hyprland-preview-share-picker-git    # window picker for screen sharing
+egl-wayland                          # EGL bindings for Wayland (required for NVIDIA)
+
+# === Themes, fonts, appearance ===
+ttf-jetbrains-mono-nerd              # monospace font with icons (Nerd Font)
+adw-gtk-theme                        # GTK theme matching libadwaita
+nwg-look                             # GUI for configuring GTK themes (like gnome-tweaks)
+plymouth-theme-nekopara-chocola-git  # Plymouth boot animation theme
+
+# === System utilities ===
+flatpak                              # package manager for sandboxed apps
+gum                                  # utility for interactive bash scripts (Charm)
+socat                                # network "cat" for sockets (TCP/UNIX/...)
+gnome-disk-utility                   # GUI disk manager
+lianli-linux-git                     # Lian Li hardware lighting/screen control
+# bottles                              # app to run win programms
+
+
+
+# === File managers & previews ===
+yazi                                 # TUI file manager
+nautilus                             # GNOME GUI file manager
+sushi                                # quick file preview in Nautilus (Space key)
+ffmpegthumbnailer                    # video thumbnail generator for file managers
+
+# === Office ===
+libreoffice-fresh                    # office suite
+
+# === Communication ===
+vesktop                              # custom Discord client
+localsend                            # LAN file sharing (AirDrop-like)
+
+# === Graphics & creative ===
+pinta                                # simple raster editor (Paint.NET-like)
+gimp                                 # photo editor (Photoshop-like)
+krita                                # digital painting
+inkscape                             # vector editor (Illustrator-like)
+blender                              # 3D modeling, animation, rendering
+
+# === Music & audio ===
+yandex-music                         # Yandex Music client (Electron repack from AUR)
+spotify-launcher                     # official Spotify client
+cliamp                               # TUI player for local music
+cava                                 # terminal audio visualizer
+audacity                             # audio editor
+
+# === Video & images ===
+mpv                                  # minimalist video player
+imv                                  # image viewer for Wayland
+obs-studio                           # screen recording and streaming
+gpu-screen-recorder                  # lightweight recorder with hardware acceleration
+
+# === Network ===
+qbittorrent                      # torrent client
 
 # === Gaming ===
-steam
-gamescope
-nvtop
-nwg-look
+steam                                # Steam client
+gamescope                            # Valve's compositor for games
+mangohud                             # FPS / temperature / etc. overlay
+gamemode                             # game optimization daemon
+lib32-gamemode                       # 32-bit gamemode (for 32-bit wine/proton)
+nvtop                                # GPU usage monitor

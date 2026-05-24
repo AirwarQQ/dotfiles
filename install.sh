@@ -27,7 +27,8 @@ backup_if_real() {
 if confirm "Intall packages?" n; then
   echo "==> Installing packages..."
   if [ -f "$DOTFILES/packages.txt" ]; then
-    grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
+    grep -v '^#' "$DOTFILES/packages.txt" | grep -v '^$' | awk '{print $1}' | paru -S --needed -
+    # grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt" | paru -S --needed -
   else
     echo "  warn: packages.txt not found, skipping"
   fi
