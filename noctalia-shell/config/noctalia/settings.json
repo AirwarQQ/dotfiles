@@ -681,7 +681,7 @@
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "monitorForColors": "DP-2",
+        "monitorForColors": "DP-3",
         "predefinedScheme": "Ayu",
         "schedulingMode": "off",
         "syncGsettings": true,
