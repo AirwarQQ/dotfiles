@@ -9,6 +9,11 @@ chromium
 neovim                               # modal text editor
 lazygit                              # TUI wrapper for git
 github-cli                           # GitHub CLI (gh)
+docker
+docker-buildx
+docker-compose
+lazydocker
+ufw-docker
 
 # === Hyprland / Wayland environment ===
 noctalia-shell                       # Quickshell-based shell
@@ -17,11 +22,16 @@ satty                                # screenshot annotation tool
 hyprland-preview-share-picker-git    # window picker for screen sharing
 egl-wayland                          # EGL bindings for Wayland (required for NVIDIA)
 
+
 # === Themes, fonts, appearance ===
 ttf-jetbrains-mono-nerd              # monospace font with icons (Nerd Font)
 adw-gtk-theme                        # GTK theme matching libadwaita
 nwg-look                             # GUI for configuring GTK themes (like gnome-tweaks)
 plymouth-theme-nekopara-chocola-git  # Plymouth boot animation theme
+gt6ct
+adwaita-6qt
+adwaita-icon-theme
+darkly-qt6-git
 
 # === System utilities ===
 flatpak                              # package manager for sandboxed apps

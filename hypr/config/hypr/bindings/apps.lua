@@ -17,8 +17,6 @@ local obsidian = "uwsm-app -- obsidian"
 local music_tui = terminal .. " -e cliamp"
 -- local btop = terminal .. " -e btop"
 local messanger = "uwsm-app -- Telegram"
-local youtube = { cmd = "uwsm-app -- YouTube.desktop", class = "chrome-youtube.com__-Default" }
-local claude = { cmd = "uwsm-app -- Claude.desktop", class = "chrome-claude.ai__-Default" }
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -45,6 +43,7 @@ hl.bind(
 )
 
 -- web apps
+local youtube = { cmd = "uwsm-app -- YouTube.desktop", class = "chrome-youtube.com__-Default" }
 hl.bind(
 	MAINMOD .. " + SHIFT + Y",
 	launch_or_focus.app({
@@ -52,11 +51,20 @@ hl.bind(
 		cmd = youtube.cmd,
 	})
 )
+local claude = { cmd = "uwsm-app -- Claude.desktop", class = "chrome-claude.ai__-Default" }
 hl.bind(
 	MAINMOD .. " + SHIFT + A",
 	launch_or_focus.app({
 		class = claude.class,
 		cmd = claude.cmd,
+	})
+)
+local github = { cmd = "uwsm-app -- GitHub.desktop", class = "chrome-github.com-Default" }
+hl.bind(
+	MAINMOD .. " + SHIFT + Q",
+	launch_or_focus.app({
+		class = github.class,
+		cmd = github.cmd,
 	})
 )
 -- hl.bind(

@@ -18,7 +18,10 @@ hl.env("NVD_BACKEND", "direct") -- VA-API hardware video acceleration
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("QT_STYLE_OVERRIDE", "kvantum")
+-- hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+-- hl.env("QT_QPA_PLATFORMTHEME", "xdgdesktopportal")
+-- hl.env("QT_STYLE_OVERRIDE", "kvantum")
+hl.env("QT_STYLE_OVERRIDE", "Darkly")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("OZONE_PLATFORM", "wayland")
 hl.env("XDG_SESSION_TYPE", "wayland")
@@ -27,3 +30,4 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 -- hl.env("ELECTRON_ENABLE_FEATURES", "MiddleClickAutoscroll") -- middle click scroll for electron
+--QT_QPA_PLATFORMTHEME=xdgdesktopportal

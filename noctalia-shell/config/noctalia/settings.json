@@ -293,7 +293,10 @@
                                 "Telegram Desktop",
                                 "Vesktop",
                                 "steam",
-                                "remmina-icon"
+                                "remmina-icon",
+                                "Cachy-Update",
+                                "DL speed: 14,5 KiB/s\nUP speed: 0 B/s",
+                                "DL speed: 0 B/s\nUP speed: 0 B/s"
                             ]
                         },
                         {
@@ -364,7 +367,7 @@
                             "colorizeIcons": false,
                             "hideMode": "hidden",
                             "id": "ActiveWindow",
-                            "maxWidth": 400,
+                            "maxWidth": 200,
                             "scrollingMode": "hover",
                             "showIcon": true,
                             "showText": true,
@@ -682,7 +685,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "DP-3",
-        "predefinedScheme": "Ayu",
+        "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -931,7 +934,7 @@
         "enableMarkdown": false,
         "enableMediaToast": false,
         "enabled": true,
-        "location": "top_right",
+        "location": "bottom_right",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],
@@ -1083,10 +1086,6 @@
             },
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
                 "id": "yazi"
             },
             {
@@ -1099,10 +1098,6 @@
             },
             {
                 "enabled": true,
-                "id": "qt"
-            },
-            {
-                "enabled": true,
                 "id": "kcolorscheme"
             },
             {
@@ -1112,15 +1107,23 @@
             {
                 "enabled": true,
                 "id": "starship"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
             }
         ],
         "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "JetBrainsMono Nerd Font",
+        "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1,
-        "fontFixed": "monospace",
+        "fontFixed": "Adwaita Mono",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.67,
         "panelsAttachedToBar": true,
@@ -1151,6 +1154,11 @@
                 "directory": "/home/airwar/Pictures/Wallpapers/DP-3/",
                 "name": "DP-3",
                 "wallpaper": ""
+            },
+            {
+                "directory": "/home/airwar/Pictures/Wallpapers/DP-1/",
+                "name": "DP-2",
+                "wallpaper": ""
             }
         ],
         "overviewBlur": 0.4,
@@ -1166,7 +1174,9 @@
         "transitionDuration": 2000,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "stripes"
+            "stripes",
+            "pixelate",
+            "honeycomb"
         ],
         "useOriginalImages": false,
         "useSolidColor": false,

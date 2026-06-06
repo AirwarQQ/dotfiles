@@ -140,8 +140,24 @@ fi
 
 if confirm "Link mimeapps.list?" n; then
   echo "==> Linking mimeapps.list..."
-  ln -sfn "$DOTFILES/config/mimeapps.list" "$HOME/.config/mimeapps.list"
+  sudo ln -sfn "$DOTFILES/config/mimeapps.list" "$HOME/.config/mimeapps.list"
 fi
+
+if confirm "Link uwsm/env?" n; then
+  echo "==> Linking uwsm/env..."
+  sudo ln -sfn "$DOTFILES/config/uwsm/env" "$HOME/.config/uwsm/env"
+fi
+
+if confirm "Ling font config?" n; then
+  echo "==> Linking font config..."
+  sudo mkdir -p ~/.config/fontconfig
+  sudo ln -sfn "$DOTFILES/config/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
+fi
+
+# TODO: add qt6ct settings and configs
+# Configuration path: "/home/airwar/.config/qt6ct"
+# Shared QSS paths: QList("/home/airwar/.local/share/qt6ct/qss", "/usr/local/share/qt6ct/qss", "/usr/share/qt6ct/qss")
+# Shared color scheme paths: QList("/home/airwar/.local/share/qt6ct/colors", "/usr/local/share/qt6ct/colors", "/usr/share/qt6ct/colors")
 
 echo "==> Done!"
 echo ""
