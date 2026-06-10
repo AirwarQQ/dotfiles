@@ -13,7 +13,9 @@ hl.monitor({
 	position = RIGHT_MONITOR_POS_X .. "x" .. RIGHT_MONITOR_POS_Y,
 	-- position = "auto",
 	scale = RIGHT_MONITOR_SCALE,
-	bitdepth = 10,
+	-- bitdepth = 10,
+	icc = "/home/airwar/dotfiles/hypr/config/hypr/MAG321UX_OLED.icm",
+	-- cm = "wide",
 	-- cm = "srgb",
 })
 
