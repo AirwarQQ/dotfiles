@@ -85,10 +85,15 @@ fi
 if confirm "Link fish config?" n; then
   echo "==> Linking fish config..."
   mkdir -p "$HOME/.config/fish/conf.d"
+  mkdir -p "$HOME/.config/systemd/user"
+  ln -sfn "$DOTFILES/config/systemd/user/ssh-agent.service" "$HOME/.config/systemd/user/ssh-agent.service"
   ln -sfn "$DOTFILES/fish/config/fish/conf.d/aliases.fish" "$HOME/.config/fish/conf.d/aliases.fish"
   ln -sfn "$DOTFILES/fish/config/fish/conf.d/starship.fish" "$HOME/.config/fish/conf.d/starship.fish"
   backup_if_real "$HOME/.config/starship.toml"
   ln -sfn "$DOTFILES/fish/config/starship.toml" "$HOME/.config/starship.toml"
+
+  systemctl --user daemon-reload
+  systemctl --user enable --now ssh-agent
 fi
 
 if confirm "Link hypr config?" n; then

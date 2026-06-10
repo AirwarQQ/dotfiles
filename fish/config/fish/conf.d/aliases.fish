@@ -4,3 +4,5 @@
 # alias lt='eza -T -L 3 -a --icons --git -I .git'
 # alias la='eza -a --icons'
 alias ltg='eza -aT --color=always --group-directories-first --icons -I .git'
+set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+set -gx LESS -R

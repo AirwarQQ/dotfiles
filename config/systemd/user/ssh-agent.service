@@ -1,0 +1,6 @@
+  [Unit]
+  Description=SSH agent
+  [Service]
+  ExecStart=/usr/bin/ssh-agent -D -a %t/ssh-agent.socket
+  [Install]
+  WantedBy=default.target
