@@ -4,6 +4,8 @@ starship                             # prompt (terminal status line)
 
 # === Browser ===
 chromium
+bitwarden
+bitwarden-cli
 
 # === Development ===
 neovim                               # modal text editor
