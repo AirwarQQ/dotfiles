@@ -1,6 +1,6 @@
-local primary = "#ffb1c1"
-local surface = "#171213"
-local secondary = "#e4bdc3"
+local primary = "#adc6ff"
+local surface = "#121316"
+local secondary = "#bfc6dc"
 local error = "#ffb4ab"
 
 hl.config({

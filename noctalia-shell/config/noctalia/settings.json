@@ -1191,11 +1191,11 @@
         "wallhavenCategories": "010",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "110",
-        "wallhavenQuery": "girl",
+        "wallhavenQuery": "black background",
         "wallhavenRatios": "portrait",
         "wallhavenResolutionHeight": "2560",
         "wallhavenResolutionMode": "atleast",
-        "wallhavenResolutionWidth": "1440",
+        "wallhavenResolutionWidth": "",
         "wallhavenSorting": "date_added",
         "wallpaperChangeMode": "random"
     }

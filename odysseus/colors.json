@@ -1,0 +1,17 @@
+{
+  "name": "noctalia",
+  "colors": {
+    "bg": "#121316",
+    "fg": "#e3e2e6",
+    "panel": "#1f1f23",
+    "border": "#8e9099",
+    "red": "#adc6ff",
+    "advanced": {
+      "userBubbleBg": "#292a2d",
+      "aiBubbleBg": "#1b1b1f",
+      "inputBg": "#1f1f23",
+      "sendBtnBg": "#adc6ff",
+      "sendBtnHover": "#0f448e"
+    }
+  }
+}

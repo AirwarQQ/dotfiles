@@ -3,25 +3,25 @@ local M = {}
 function M.setup()
   require("base16-colorscheme").setup({
     -- Background tones
-    base00 = "#171213",
-    base01 = "#241e1f",
-    base02 = "#2f2829",
-    base03 = "#9e8c8f",
+    base00 = "#121316",
+    base01 = "#1f1f23",
+    base02 = "#292a2d",
+    base03 = "#8e9099",
 
     -- Foreground tones
-    base04 = "#d6c2c4",
-    base05 = "#ece0e0",
-    base06 = "#ece0e0",
-    base07 = "#ece0e0",
+    base04 = "#c4c6d0",
+    base05 = "#e3e2e6",
+    base06 = "#e3e2e6",
+    base07 = "#e3e2e6",
 
     -- Accent colors
     base08 = "#ffb4ab",
-    base09 = "#ecbe91",
-    base0A = "#e4bdc3",
-    base0B = "#ffb1c1",
-    base0C = "#ecbe91",
-    base0D = "#ffb1c1",
-    base0E = "#e4bdc3",
+    base09 = "#debcdf",
+    base0A = "#bfc6dc",
+    base0B = "#adc6ff",
+    base0C = "#debcdf",
+    base0D = "#adc6ff",
+    base0E = "#bfc6dc",
     base0F = "#93000a",
   })
 end

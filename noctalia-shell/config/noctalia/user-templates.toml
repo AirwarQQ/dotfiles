@@ -19,6 +19,11 @@
 input_path = "~/.config/hypr/noctalia/noctalia-colors-template.lua"
 output_path = "~/.config/hypr/noctalia/noctalia-colors.lua"
 
+
+[templates.odysseus]
+input_path = "~/dotfiles/odysseus/colors-template.json"
+output_path = "~/dotfiles/odysseus/colors.json"
+
 [templates.chromium_theme]
 input_path = "~/dotfiles/chromium/chromium-template.theme"
 output_path = "~/dotfiles/chromium/chromium.theme"
