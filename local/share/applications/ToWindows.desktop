@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ToWindows
+Comment=Reboot into Windows
+Exec=/home/airwar/.local/bin/towindows
+Icon=/home/airwar/.local/share/applications/icons/Windows.png
+Terminal=false
+Categories=System;
+StartupNotify=true

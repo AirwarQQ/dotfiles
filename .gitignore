@@ -12,7 +12,9 @@ local/share/applications/*
 !local/share/applications/chromium.desktop
 !local/share/applications/YouTube.desktop
 !local/share/applications/Claude.desktop
+!local/share/applications/ToWindows.desktop
 !local/share/applications/icons/
 local/share/applications/icons/*
 !local/share/applications/icons/YouTube.png
 !local/share/applications/icons/Claude.png
+!local/share/applications/icons/Windows.png

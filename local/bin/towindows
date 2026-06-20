@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# sudo visudo -f /etc/sudoers.d/efibootmgr
+# airwar ALL=(root) NOPASSWD: /usr/bin/efibootmgr
+
+win=$(efibootmgr | grep -i 'Windows Boot Manager' | grep -oP 'Boot\K[0-9A-Fa-f]{4}' | head -n1)
+[ -z "${win:-}" ] && {
+  echo "There is no Windows Boot Manager"
+  exit 1
+}
+
+order=$(efibootmgr | sed -n 's/^BootOrder: //p' | tr -d ' ')
+rest=$(tr ',' '\n' <<<"$order" | grep -vix "$win" | paste -sd,)
+sudo efibootmgr -o "${win}${rest:+,$rest}"
+
+systemctl reboot
