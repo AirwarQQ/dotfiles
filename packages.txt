@@ -1,6 +1,7 @@
 # === Terminal & Shell ===
 alacritty                            # terminal emulator
 starship                             # prompt (terminal status line)
+vi
 
 # === Browser ===
 chromium

@@ -1,17 +1,25 @@
--- TODO: add spotify support
--- hl.window_rule({
--- 	name = "tag music apps",
--- 	tag = "+music",
--- 	match = {
--- 		class = "^(YandexMusic|Spotify)$",
--- 	},
--- })
+local music_monitor = LEFT_MONITOR
+local music_classes = { "YandexMusic", "spotify" }
+
+local music_match = "^(" .. table.concat(music_classes, "|") .. ")$"
+
+local function is_music_window(class)
+	if not class then
+		return false
+	end
+	for _, c in ipairs(music_classes) do
+		if class == c then
+			return true
+		end
+	end
+	return false
+end
 
 hl.window_rule({
 	name = "music-rule",
-	monitor = "DP-2",
+	monitor = music_monitor,
 	match = {
-		class = "^(YandexMusic)$",
+		class = music_match,
 	},
 	workspace = "special:music",
 	-- float = true,
@@ -29,15 +37,15 @@ function music_func.toggle(music_cmd)
 
 		local exists = false
 		for _, win in ipairs(windows) do
-			if win.class == "YandexMusic" then
+			if is_music_window(win.class) then
 				exists = true
 				break
 			end
 		end
 
 		if exists then
-			if current_monitor ~= nil and current_monitor.name ~= "DP-2" then
-				hl.dispatch(hl.dsp.focus({ monitor = "DP-2" }))
+			if current_monitor ~= nil and current_monitor.name ~= music_monitor then
+				hl.dispatch(hl.dsp.focus({ monitor = music_monitor }))
 			end
 			hl.dispatch(hl.dsp.workspace.toggle_special("music"))
 		else
